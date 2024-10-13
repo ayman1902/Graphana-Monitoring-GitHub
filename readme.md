@@ -142,12 +142,3 @@ For more information, refer to the following resources:
 ## Conclusion
 
 Monitoring your GitHub repositories has never been easier with the Grafana Monitoring for GitHub project. By leveraging the power of Grafana, Ansible, and Terraform, you can create a customizable and real-time dashboard to keep track of your development activities. Start monitoring today and take your project management to the next level!
-
----
-
-### Final Notes
-
-- **Images and Diagrams**: If you have any architectural diagrams or screenshots of your Grafana dashboards, consider including them to make the article visually appealing.
-- **Code Snippets**: Ensure the code snippets are correctly formatted, as shown, for clarity.
-
-Feel free to make any additional modifications or ask if you need more details on specific sections!
