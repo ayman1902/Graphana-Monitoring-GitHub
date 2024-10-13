@@ -1,0 +1,41 @@
+# Ignore PEM files
+*.pem
+
+# Ignore environment variables
+.env
+
+# Ignore specific text file
+t.txt
+
+# Ignore Terraform files
+*.tfstate
+*.tfstate.backup
+*.tfvars
+*.tfvars.json
+.terraform/
+terraform.tfstate.lock.hcl
+.terraform.lock.hcl
+.terraform.tfstate.lock.info
+
+# Ignore Ansible files
+*.retry
+*.yml
+*.yaml
+config/local.yml
+
+# Ignore sensitive files
+.aws_credentials
+*.pem
+.env
+
+# Ignore logs and temporary files
+logs/
+*.log
+*.tmp
+*.temp
+
+# Ignore OS generated files
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Icon?
