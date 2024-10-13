@@ -1,0 +1,41 @@
+---
+- name: Install and configure Grafana
+  hosts: my_ec2
+  become: true
+  tasks:
+
+    - name: Update apt package index
+      apt:
+        update_cache: yes
+
+    - name: Install required dependencies
+      apt:
+        name:
+          - adduser
+          - libfontconfig1
+          - wget
+        state: present
+
+    - name: Download Grafana package
+      get_url:
+        url: https://dl.grafana.com/enterprise/release/grafana-enterprise_11.2.2_amd64.deb
+        dest: /tmp/grafana-enterprise_11.2.2_amd64.deb
+
+    - name: Install Grafana
+      apt:
+        deb: /tmp/grafana-enterprise_11.2.2_amd64.deb
+
+    - name: Start and enable Grafana service
+      systemd:
+        name: grafana-server
+        enabled: true
+        state: started
+
+    - name: Ensure Grafana is listening on the default port
+      shell: "ss -tuln | grep ':3000'"
+      register: grafana_port
+      failed_when: grafana_port.rc != 0
+
+    - debug:
+        msg: "{{ grafana_port.stdout }}"
+

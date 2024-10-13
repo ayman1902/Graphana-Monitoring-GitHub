@@ -19,7 +19,6 @@ terraform.tfstate.lock.hcl
 
 # Ignore Ansible files
 *.retry
-*.yml
 *.yaml
 config/local.yml
 
