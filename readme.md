@@ -1,7 +1,3 @@
-Certainly! Here's a complete Medium article outlining your "Grafana Monitoring for GitHub" project. This article can serve as a comprehensive guide for readers interested in monitoring GitHub repositories using Grafana, Ansible, and Terraform.
-
----
-
 # Monitoring GitHub Repositories with Grafana: A Complete Guide
 
 ## Introduction
